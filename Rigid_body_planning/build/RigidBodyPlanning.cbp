@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="RigidBodyPlanning" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\usr\local\share\ompl\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="RigidBodyPlanning">
+         <Option output="/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/RigidBodyPlanning" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 RigidBodyPlanning" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="RigidBodyPlanning/fast">
+         <Option output="/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/RigidBodyPlanning" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 RigidBodyPlanning/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/RigidBodyPlanning.cpp">
+         <Option target="RigidBodyPlanning"/>
+      </Unit>
+      <Unit filename="/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/ljq/ompl_tutorial/OMPL_Sample/Rigid_body_planning/../../../../../usr/local/share/ompl/ompl-config.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\ompl\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>
