@@ -111,7 +111,7 @@ void rrt_planner::initialize(std::string name, costmap_2d::Costmap2DROS* costmap
                     OGM[iy*width+ix]=true;
                 else
                     OGM[iy*width+ix]=false;*/
-              if(cost<=78)  
+              if(cost<=5)  
                     OGM[iy*width+ix]=true;
                 else
                     OGM[iy*width+ix]=false;
@@ -429,7 +429,7 @@ vector<RRT::rrtNode>   rrt_planner::findCellPath(RRT &myRRT1,RRT &myRRT2, int st
 
     bool addNodeResult = false, nodeToGoal = false;
     int u=0;
-    while(u<8000)
+    while(u<4000)
     {
     if(u%2==0)
     {
@@ -469,7 +469,7 @@ vector<RRT::rrtNode>   rrt_planner::findCellPath(RRT &myRRT1,RRT &myRRT2, int st
                 rrtPath1 = myRRT1.getRootToEndPath(lastNode.nodeID);//启发函数优化RRT方法得到路径
                 rrtPath2 = myRRT2.getRootToEndPath(lastNode1.nodeID);
 
-                break;
+                //break;
             }
 
         }
@@ -511,7 +511,7 @@ vector<RRT::rrtNode>   rrt_planner::findCellPath(RRT &myRRT1,RRT &myRRT2, int st
                 RRT::rrtNode lastNode1=myRRT1.getNode(v2[0]);
                 rrtPath2 = myRRT2.getRootToEndPath(lastNode.nodeID);//启发函数优化RRT方法得到路径
                 rrtPath1 = myRRT1.getRootToEndPath(lastNode1.nodeID);
-                break;
+                //break;
             }
         }
 
@@ -679,8 +679,9 @@ bool rrt_planner::pointcheck(RRT::rrtNode const &m,RRT::rrtNode const &n)
         test.posY=(int)(m.posY+p*dist*sin(theta));
         if(!checkIfOnObstacles(test))
         {
-            break;
+        
             return false;
+            break;
         }
 
         p=p+0.2;
@@ -737,3 +738,4 @@ bool rrt_planner::isStartAndGoalCellsValid(int startCell,int goalCell)
 }
 
 }
+
