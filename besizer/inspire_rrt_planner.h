@@ -173,7 +173,7 @@ public:
     {
         RRT::rrtNode loopNode;
         float p=rand()%100/(double)(101);
-        if(p<0.5)
+        if(p<0.1)
         {
             loopNode.posX=m;
             loopNode.posY=n;
@@ -256,8 +256,8 @@ public:
         {
             RRT::rrtNode successNode=tempNodes[tempIndex];
             RRT::rrtNode nearestNode=nearestNodes[tempIndex];
-            float thrshold=15.00,maxvalue=999,maxvalue1;     
-            int index=-1,index1=-1;      
+            float thrshold=25.00,maxvalue=999,maxvalue1;     
+            int index=-1;      
             for(int i=0;i<myRRT.getTreeSize();i++)
             {
                 float dist=sqrt(pow(successNode.posX-myRRT.getNode(i).posX,2)+pow(successNode.posY-myRRT.getNode(i).posY,2));
@@ -278,27 +278,31 @@ public:
                 successNode.nodeID = myRRT.getTreeSize();
                 successNode.depth=nearestNodes[tempIndex].depth+1; 
             }
+            vector<int>index1;
             for(int j=0;j<myRRT.getTreeSize();j++)
             {
                 float dist1=sqrt(pow(successNode.posX-myRRT.getNode(j).posX,2)+pow(successNode.posY-myRRT.getNode(j).posY,2));
-                if((j!=index)&&(dist1<thrshold))
-                {
-                   break;
-                    index1=j;
+                if((j!=index)&&(dist1<thrshold)&&(pointcheck(successNode,myRRT.getNode(j) )))
+                {              
+                    index1.push_back(j);
                 }
             }
-            if((index1!=-1)&&(pointcheck(successNode,myRRT.getNode(index1)))&&(index!=-1)&&(pointcheck(myRRT.getNode(index),successNode)))
+            if((index1.size()!=0)&&(index!=-1)&&(pointcheck(myRRT.getNode(index),successNode)))
             {
-                    RRT::rrtNode tt=myRRT.getNode(index1);
-                    successNode.nodeID = myRRT.getTreeSize();
-                    successNode.depth=myRRT.getNode(index).depth+sqrt(pow(successNode.posX-myRRT.getNode(index).posX,2)+pow(successNode.posY-myRRT.getNode(index).posY,2))/rrtStepSize;                    
-                    tt.parentID=successNode.nodeID; 
-                    tt.depth=successNode.depth+sqrt(pow(successNode.posX-myRRT.getNode(index1).posX,2)+pow(successNode.posY-myRRT.getNode(index1).posY,2))/rrtStepSize;
-                    tt.nodeID=myRRT.getTreeSize()+1;
-                    myRRT.getNode(index1)=tt;
-                    
+            	    for (int k=0;k<index1.size();k++)
+            	    {
+                    	RRT::rrtNode tt=myRRT.getNode(index1[k]);
+                    	successNode.nodeID = myRRT.getTreeSize();
+                    	successNode.depth=myRRT.getNode(index).depth+sqrt(pow(successNode.posX-myRRT.getNode(index).posX,2)+pow(successNode.posY-myRRT.getNode(index).posY,2))/rrtStepSize;   
+                    	if((successNode.depth+sqrt(pow(successNode.posX-myRRT.getNode(index1[k]).posX,2)+pow(successNode.posY-myRRT.getNode(index1[k]).posY,2))/rrtStepSize<myRRT.getNode(index1[k]).depth)&&(pointcheck(successNode,myRRT.getNode(index1[k]))))
+                    	{          
+                    		tt.parentID=successNode.nodeID; 
+                    		tt.depth=successNode.depth+sqrt(pow(successNode.posX-myRRT.getNode(index1[k]).posX,2)+pow(successNode.posY-myRRT.getNode(index1[k]).posY,2))/rrtStepSize;
+                    		tt.nodeID=myRRT.getTreeSize()+1;
+                   		myRRT.getNode(index1[k])=tt;
+                       }
+                    }
             }
-    
             myRRT.addNewNode(successNode);
             return true;            
         }
@@ -364,3 +368,4 @@ bool checkConnect(RRT &myRRT,RRT::rrtNode &tempNode)
 
 };
 #endif
+
